@@ -48,7 +48,7 @@ func Decompress(s []byte) []byte {
 	return data
 }
 
-func DecodeToSendPkg(s []byte) GateMsg {
+func DecodeToGateMsg(s []byte) GateMsg {
 	p := GateMsg{}
 	dec := gob.NewDecoder(bytes.NewReader(s))
 	err := dec.Decode(&p)
@@ -58,7 +58,7 @@ func DecodeToSendPkg(s []byte) GateMsg {
 	return p
 }
 
-func DecodeToReceivePkg(s []byte) ServiceMsg {
+func DecodeToServiceMsg(s []byte) ServiceMsg {
 	p := ServiceMsg{}
 	dec := gob.NewDecoder(bytes.NewReader(s))
 	err := dec.Decode(&p)

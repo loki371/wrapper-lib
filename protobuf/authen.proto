@@ -1,5 +1,5 @@
 syntax = "proto3";
-package authen;
+package protobuf;
 option go_package = ".";
 
 message Session {

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package authen;
+option go_package = ".";
+
+message Session {
+    string session = 1;
+    int32 uid = 2;
+}
+
+message Login {
+    string username = 1;
+    string password = 2;
+}
+
+message Register {
+    string username = 1;
+    string password = 2;
+}

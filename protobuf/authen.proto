@@ -2,8 +2,12 @@ syntax = "proto3";
 package protobuf;
 option go_package = ".";
 
-message Session {
+message UIDBySession {
     string session = 1;
+}
+
+message ResUIDBySession {
+    bool err = 1; 
     int32 uid = 2;
 }
 
@@ -12,7 +16,17 @@ message Login {
     string password = 2;
 }
 
+message ResLogin {
+    bool err = 1;
+    int32 uid = 2;
+}
+
 message Register {
     string username = 1;
     string password = 2;
+}
+
+message ResRegister {
+    bool err = 1;
+    int32 uid = 2;
 }
